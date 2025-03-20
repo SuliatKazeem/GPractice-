@@ -1,0 +1,19 @@
+
+.container {
+            width: 1500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+#patientForm, #staffForm {
+            display: none;
+            margin-top: 20px;
+        }
+input {
+            width: 20%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }

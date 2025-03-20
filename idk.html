@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Healthcare System</title>
+        <link rel="stylesheet" href="onestyle.css">
+        <script>
+            function showPatientForm() {
+                document.getElementById('patientForm').style.display = 'block';
+                document.getElementById('staffForm').style.display = 'none';
+            }
+            function showStaffForm() {
+                document.getElementById('staffForm').style.display = 'block';
+                document.getElementById('patientForm').style.display = 'none';
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                Welcome to Suliat Healthcare System
+            </h1>
+            <h3>
+                Please log in using the appropriate method below.
+            </h3>
+            <button type="button" onclick="showPatientForm()"> 
+                Patient Login
+            </button>
+            <button type="button" onclick="showStaffForm()"> 
+                Staff Login
+            </button>
+
+            <div id="patientForm">
+                <h2>PATIENT LOGIN</h2>
+                <form action="patient.php" method="POST">
+                <h3> 
+                    Patient ID: <input type="text" name="patientID" id="patientID" placeholder="Enter your ID" required>
+                </h3>
+                <h3> 
+                    NHS Number: <input type="text" name="NHSnumber" id="NHSnumber" placeholder="Enter your NHS Number" required>
+                </h3>
+                <button type="submit">
+                    Enter
+                </button>
+                </form>
+            </div>
+
+            <div id="staffForm">
+                <h2>STAFF LOGIN</h2>
+                <form action="onestaff.php" method="POST">
+                    <h3> 
+                        Staff Name: <input type="text"  name="staffName" id="staffname" placeholder="Enter your name" required>
+                    </h3>
+                    <h3> 
+                        Staff ID: <input type="text"  name="staffID" id="staffID" placeholder="Enter your ID" required>
+                    </h3>
+                    <button type="submit">
+                        Enter
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
